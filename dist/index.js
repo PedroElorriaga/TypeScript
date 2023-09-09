@@ -1,3 +1,3 @@
 'use strict';
-const nome = 'Pedrinho';
-console.log(nome);
+const start = 'Inicializando a compilação';
+console.log(start);

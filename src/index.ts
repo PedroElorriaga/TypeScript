@@ -1,3 +1,3 @@
-const nome = 'Pedrinho';
+const start = 'Inicializando a compilação';
 
-console.log(nome);
+console.log(start);

@@ -1,7 +1,7 @@
 Typescript deve ser instalado utilizando o -> npm i typescript -D 
 
 
-* Como compliar o ts para executar em js -> npx tsc nome_do_arqv.ts        ou só        npx tsc
+* Como compliar o ts para executar em js -> npx tsc nome_do_arqv.ts        ou se seu arquivo de configuração tsconfig.json já tiver o parâmentro include, basta executar ->             npx tsc
 
 
 * Instalando p ts-node -> npm i ts-node -D ; Depois criaremos uma pasta chamada .vscode, e criamos um arquivo settings.json dentro dessa pasta e colocaremos a seguinte informação -> 
@@ -63,3 +63,25 @@ module.exports = {
 * Uma forma fácil de iniciar um projeto TS do zero -> npx tsc --init ; Isso criara um arquivo de configuração tsconfig.json -> segue os parâmetros que achei mais importante modificar:
 
 "outDir" - é o caminho de saída dos arquivos quando for compilado
+
+
+
+
+
+* Configurando editorconfig -> Instalaremos a extensão do editorconfig ; Criaremos a o arquivo .editorconfig com os seguintes dados -> 
+
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+end_of_line = lf
+
+
+
+
+
+
