@@ -4,7 +4,7 @@ Typescript deve ser instalado utilizando o -> npm i typescript -D
 * Como compliar o ts para executar em js -> npx tsc nome_do_arqv.ts        ou se seu arquivo de configuração tsconfig.json já tiver o parâmentro include, basta executar ->             npx tsc
 
 
-* Instalando p ts-node -> npm i ts-node -D ; Depois criaremos uma pasta chamada .vscode, e criamos um arquivo settings.json dentro dessa pasta e colocaremos a seguinte informação -> 
+* Instalando o ts-node -> npm i ts-node -D ; Depois criaremos uma pasta chamada .vscode, e criamos um arquivo settings.json dentro dessa pasta e colocaremos a seguinte informação -> 
 
 {
     "code-runner.executorMap": {
@@ -18,6 +18,8 @@ Typescript deve ser instalado utilizando o -> npm i typescript -D
 
 
 * Instalando e configurando ESlint -> npm i eslint -D ; Baixar a extensão ESlint Vscode ; Depois deveremos fazer a integração do ESlint com o TypeScript -> npm i @typescript-eslint/eslint-plugin @typescript-eslint/parser -D ; Depois iremos fazer a configuração do ESlint ; Depois instalaremos o prettier -> npm i prettier eslint-config-prettier eslint-plugin-prettier -D ; Criaremos agora um arquivo .prettierrc.js e colocaremos a seguinte informação -> 
+
+**CASO QUEIRA DESATIVAR O ESLINT EM UM ARQUIVO ESCREVA /* eslint-disable */ NO COMEÇO DO ARQUIVO
 
 module.exports = {
     semi: true,
@@ -81,6 +83,14 @@ insert_final_newline = true
 end_of_line = lf
 
 
+
+
+
+
+* ------------------------- SINTAXE ---------------------*
+
+Type Annotations --------: Tipos: number, string, boolean, symbol, bigint
+number -> tudo isso que vou colocar é um tipo de number -> "10, 1.57, -5.40, 0xf00d, 0b10, 0o7744"
 
 
 
