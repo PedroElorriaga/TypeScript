@@ -1,0 +1,65 @@
+Typescript deve ser instalado utilizando o -> npm i typescript -D 
+
+
+* Como compliar o ts para executar em js -> npx tsc nome_do_arqv.ts        ou só        npx tsc
+
+
+* Instalando p ts-node -> npm i ts-node -D ; Depois criaremos uma pasta chamada .vscode, e criamos um arquivo settings.json dentro dessa pasta e colocaremos a seguinte informação -> 
+
+{
+    "code-runner.executorMap": {
+        "typescript": "npx ts-node --files"
+    }
+}
+
+
+
+
+
+
+* Instalando e configurando ESlint -> npm i eslint -D ; Baixar a extensão ESlint Vscode ; Depois deveremos fazer a integração do ESlint com o TypeScript -> npm i @typescript-eslint/eslint-plugin @typescript-eslint/parser -D ; Depois iremos fazer a configuração do ESlint ; Depois instalaremos o prettier -> npm i prettier eslint-config-prettier eslint-plugin-prettier -D ; Criaremos agora um arquivo .prettierrc.js e colocaremos a seguinte informação -> 
+
+module.exports = {
+    semi: true,
+    trailingComma: 'all',
+    singleQuote: true,
+    printWidth: 80,
+    tabWidth: 2,
+  } 
+
+Agora criaremos um arquivo chamado .eslintrc.js e colocaremos a seguinte configuração -> 
+
+module.exports = {
+    env: {
+      browser: true,
+      es6: true,
+      node: true,
+    },
+    extends: [
+      'eslint:recommended',
+      'plugin:@typescript-eslint/eslint-recommended',
+      'plugin:@typescript-eslint/recommended',
+      'plugin:prettier/recommended',
+    ],
+    globals: {
+      Atomics: 'readonly',
+      SharedArrayBuffer: 'readonly',
+    },
+    parser: '@typescript-eslint/parser',
+    parserOptions: {
+      ecmaVersion: 11,
+      sourceType: 'module',
+    },
+    plugins: ['@typescript-eslint'],
+    rules: {},
+  };
+
+
+
+
+
+
+
+* Uma forma fácil de iniciar um projeto TS do zero -> npx tsc --init ; Isso criara um arquivo de configuração tsconfig.json -> segue os parâmetros que achei mais importante modificar:
+
+"outDir" - é o caminho de saída dos arquivos quando for compilado
