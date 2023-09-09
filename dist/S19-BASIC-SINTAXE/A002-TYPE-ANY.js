@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 // USADO EM UTLIMOS CASOS O ANY
 function showMessage(tag) {
-  return tag;
+    return tag;
 }
 console.log(showMessage([1, 2, 3]));
 console.log(showMessage('Pedrinho'));

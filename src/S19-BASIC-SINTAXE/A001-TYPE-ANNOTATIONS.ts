@@ -41,3 +41,4 @@ function soma(x: number, y:number):number {
 
 console.log(soma(2000, 2));
 
+export { pessoa }

@@ -1,10 +1,10 @@
-Typescript deve ser instalado utilizando o -> npm i typescript -D 
+Typescript deve ser instalado utilizando o -> npm i typescript -D
 
 
 * Como compliar o ts para executar em js -> npx tsc nome_do_arqv.ts        ou se seu arquivo de configuração tsconfig.json já tiver o parâmentro include, basta executar ->             npx tsc
 
 
-* Instalando o ts-node -> npm i ts-node -D ; Depois criaremos uma pasta chamada .vscode, e criamos um arquivo settings.json dentro dessa pasta e colocaremos a seguinte informação -> 
+* Instalando o ts-node -> npm i ts-node -D ; Depois criaremos uma pasta chamada .vscode, e criamos um arquivo settings.json dentro dessa pasta e colocaremos a seguinte informação ->
 
 {
     "code-runner.executorMap": {
@@ -17,7 +17,7 @@ Typescript deve ser instalado utilizando o -> npm i typescript -D
 
 
 
-* Instalando e configurando ESlint -> npm i eslint -D ; Baixar a extensão ESlint Vscode ; Depois deveremos fazer a integração do ESlint com o TypeScript -> npm i @typescript-eslint/eslint-plugin @typescript-eslint/parser -D ; Depois iremos fazer a configuração do ESlint ; Depois instalaremos o prettier -> npm i prettier eslint-config-prettier eslint-plugin-prettier -D ; Criaremos agora um arquivo .prettierrc.js e colocaremos a seguinte informação -> 
+* Instalando e configurando ESlint -> npm i eslint -D ; Baixar a extensão ESlint Vscode ; Depois deveremos fazer a integração do ESlint com o TypeScript -> npm i @typescript-eslint/eslint-plugin @typescript-eslint/parser -D ; Depois iremos fazer a configuração do ESlint ; Depois instalaremos o prettier -> npm i prettier eslint-config-prettier eslint-plugin-prettier -D ; Criaremos agora um arquivo .prettierrc.js e colocaremos a seguinte informação ->
 
 **CASO QUEIRA DESATIVAR O ESLINT EM UM ARQUIVO ESCREVA /* eslint-disable */ NO COMEÇO DO ARQUIVO
 
@@ -27,9 +27,9 @@ module.exports = {
     singleQuote: true,
     printWidth: 80,
     tabWidth: 2,
-  } 
+  }
 
-Agora criaremos um arquivo chamado .eslintrc.js e colocaremos a seguinte configuração -> 
+Agora criaremos um arquivo chamado .eslintrc.js e colocaremos a seguinte configuração ->
 
 module.exports = {
     env: {
@@ -70,7 +70,7 @@ module.exports = {
 
 
 
-* Configurando editorconfig -> Instalaremos a extensão do editorconfig ; Criaremos a o arquivo .editorconfig com os seguintes dados -> 
+* Configurando editorconfig -> Instalaremos a extensão do editorconfig ; Criaremos a o arquivo .editorconfig com os seguintes dados ->
 
 root = true
 
@@ -89,9 +89,45 @@ end_of_line = lf
 
 * ------------------------- SINTAXE ---------------------*
 
+OBS: Caso uma váriavel der o alerta de que ela esta sendo usada em um escopo global, apenas exporte ela no fim do código -> export { variavel }
+
 Type Annotations --------: Tipos: number, string, boolean, symbol, bigint
-number -> tudo isso que vou colocar é um tipo de number -> "10, 1.57, -5.40, 0xf00d, 0b10, 0o7744"
+number -> tudo isso que vou colocar é um tipo de number -> "10, 1.57, -5.40, 0xf00d, 0b10, 0o7744", AULA S19/A001
 
 
+ANY ---------: É utilizado quando não é necessário declarar o tipo, é sempre usado em ultimos CASOS, AULA S19/A002
 
 
+VOID ---------: É utilizado quando uma função ou um método não retorna nada, AULA S19/A003
+
+
+OBJECT ---------: É utilizado em objetos, normalmente quando não sabemos quantas chaves vão ser criadas, RECOMENDO OLHAR O EXEMPLO NO S19/A004
+SINTAXE -> const nome: {object Type} = {atributos};
+
+
+ARRAY ----------: São arrays e a sintaxe de tipo pode ser declaradas de duas formas -> Array<T> ou T[], AULA S19/A005
+
+
+TUPLE ----------: São tuplas que poder ser imutaveis, AULA S9/A006
+SINTAXE DE UMA FACTORY FUNCTION -> function nome(atributo_de_entrada: tipo): {atributo: tipo} {retorno}
+
+
+NULL e UNDEFINED ----------: São tipos que retornam valores nulos ou valores não declarados, AULA S19/A007
+
+
+NEVER -----------: Nunca retona nada, e é parecido com o VOID, AULA S19/A003
+
+
+ENUM ---------: É uma estrutura em que podemos colocar chaves ao valores, AULA S19/A008
+
+
+UNKNOWN --------: Obriga ser feita uma verificação do valor, AULA S19/A009
+
+
+UNION TYPES -------: É o processo de poder utilizar mais tipos em uma variavel -> Ex: variavel: string | number, AULA S19/A005 linha 24
+
+
+TIPOS LITERAIS ---------: Podemos retornar somente os parametros que disponibilizarmos -> Ex: variavel: 'vermelho' | 'amarelo' | 'azul', AULA S19/A010
+
+
+TYPE ALIAS ----------: Cria tipos que podemos juntar em outros tipos, AULA S19/A011
