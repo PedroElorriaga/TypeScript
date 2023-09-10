@@ -2,6 +2,7 @@ Typescript deve ser instalado utilizando o -> npm i typescript -D
 
 
 * Como compliar o ts para executar em js -> npx tsc nome_do_arqv.ts        ou se seu arquivo de configuração tsconfig.json já tiver o parâmentro include, basta executar ->             npx tsc
+OBS: no arquvio tsconfig.js verifique se a LIB está com o DOM e o ESNext passados como parametros.
 
 
 * Instalando o ts-node -> npm i ts-node -D ; Depois criaremos uma pasta chamada .vscode, e criamos um arquivo settings.json dentro dessa pasta e colocaremos a seguinte informação ->
@@ -131,3 +132,12 @@ TIPOS LITERAIS ---------: Podemos retornar somente os parametros que disponibili
 
 
 TYPE ALIAS ----------: Cria tipos que podemos juntar em outros tipos, AULA S19/A011
+
+
+INTERSECTION TYPE --------: Ele é tratado com uma interseção, que é o cruzamento de duas informações em uma só, e é obrigatório ser usado, AULA S19/A012
+
+
+FUNÇÕES COMO TIPO -------------: Aprenderemos a como tipar uma função, AULA S19/A013
+
+
+TYPE ASSERTION ---------: Usamos para especificar o tipo de um valor e dizer ao compilador para não deduzi-lo, ver a AULA S19/A014
