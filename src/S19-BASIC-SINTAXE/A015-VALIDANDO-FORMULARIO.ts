@@ -1,4 +1,5 @@
 const showErrorMessages: string = 'show-error-message';
+import isEmail from 'validator/lib/isEmail';
 
 const form = document.querySelector('.form') as HTMLFormElement;
 const username = document.querySelector('.username') as HTMLInputElement;
@@ -12,6 +13,7 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   limparErros(form);
   verificarCampoVazio(username, email, password, repetirSenha);
+  verificarEmail(email);
   validarSenha(password, repetirSenha);
   if (enviarFormulario(form)) console.log('Formuário enviado');
 });
@@ -43,6 +45,12 @@ const exibirMensagemErro = (
   ) as HTMLSpanElement;
   errorMessages.innerHTML = mensagem;
   formFields.classList.add(showErrorMessages);
+};
+
+const verificarEmail = (input: HTMLInputElement): void => {
+  if (!isEmail(input.value)) {
+    exibirMensagemErro(input, `O campo ${input.classList} está inválido`);
+  }
 };
 
 const validarSenha = (
