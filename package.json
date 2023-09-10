@@ -20,5 +20,9 @@
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2",
     "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "@types/validator": "^13.11.1",
+    "validator": "^13.11.0"
   }
 }
